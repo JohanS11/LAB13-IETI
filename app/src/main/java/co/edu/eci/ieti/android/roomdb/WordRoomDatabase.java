@@ -14,7 +14,7 @@ import co.edu.eci.ieti.android.dao.UserDAO;
 import co.edu.eci.ieti.android.network.data.Task;
 import co.edu.eci.ieti.android.network.data.User;
 
-@Database(entities = {Task.class, User.class}, version = 1, exportSchema = false)
+@Database(entities = {Task.class, User.class}, version = 1 )
 public abstract class WordRoomDatabase extends RoomDatabase {
 
     public abstract UserDAO userDAO();

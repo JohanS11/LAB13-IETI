@@ -1,8 +1,9 @@
-package co.edu.eci.ieti.android.ui.adapter;
+package co.edu.eci.ieti.android.ui;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +19,11 @@ public class TasksAdapter
 
     List<Task> taskList = null;
 
+    public TasksAdapter(List<Task> tasks) {
+        this.taskList = tasks;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType )
@@ -29,7 +35,9 @@ public class TasksAdapter
     public void onBindViewHolder( @NonNull ViewHolder holder, int position )
     {
         Task task = taskList.get( position );
-        //TODO implement update view holder using the task values
+        ((TextView) holder.itemView.findViewById(R.id.name)).setText(task.getDescription());
+        ((TextView) holder.itemView.findViewById(R.id.priority)).setText("Priority: "+ task.getPriority());
+        ((TextView) holder.itemView.findViewById(R.id.date)).setText("Date: "+ task.getDueDate().toString());
     }
 
     @Override

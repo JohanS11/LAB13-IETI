@@ -1,4 +1,4 @@
-package co.edu.eci.ieti.android.network.service;
+package co.edu.eci.ieti.android.ui.utils;
 
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;

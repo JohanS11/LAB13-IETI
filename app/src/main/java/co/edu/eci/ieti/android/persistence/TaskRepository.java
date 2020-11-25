@@ -24,7 +24,7 @@ public class TaskRepository {
         try{
             List<Task> tasks = service.getTasks().execute().body();
             if(tasks!=null){
-                taskDAO.deleteAll();
+                //taskDAO.deleteAll();
                 for(Task task:tasks) {
                     taskDAO.insert(task);
                 }

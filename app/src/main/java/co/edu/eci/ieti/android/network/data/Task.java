@@ -9,7 +9,7 @@ import androidx.room.TypeConverters;
 
 import java.util.Date;
 
-import co.edu.eci.ieti.android.network.service.ToDate;
+import co.edu.eci.ieti.android.ui.utils.ToDate;
 
 @Entity(tableName = "task")
 public class Task {
