@@ -1,6 +1,7 @@
 package co.edu.eci.ieti.android.network.data;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
@@ -10,6 +11,7 @@ public class User {
 
     @PrimaryKey
     @NonNull
+    @ColumnInfo(name = "user")
     private String email;
 
     private String password;

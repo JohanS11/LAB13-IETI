@@ -1,6 +1,7 @@
 package co.edu.eci.ieti.android.network.data;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
@@ -15,12 +16,13 @@ public class Task {
 
     @PrimaryKey
     @NonNull
+    @ColumnInfo(name = "task")
     private long id;
 
     private String description;
 
     private int priority;
-
+    @Ignore
     private User assignedTo;
     @TypeConverters(ToDate.class)
     private Date dueDate;
